@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .md{
+        border: 2px solid black;
+        height: 540px;
+        width: 330px;
+        margin: 100px;
+        border-radius: 10px;
+        background-color:black;
+     }
+     .btn{
+          height: 80px;
+          width: 70px;
+          margin-top: 15px;
+          margin-left: 7PX;
+          font-size: 30px;
+          border-radius: 10px;
+
+     }
+     .btn:hover{
+        color:green;
+        background-color: aqua;
+     }
+     #search{
+     width: 280px;
+     height: 40px;
+     margin-top: 10px;
+     margin-left: 15PX;
+     font-size: 20px;
+     }
+ .btn1{
+    margin-left: 160px;
+ }    
+
+    </style>
+
+
+</head>
+<body>
+   
+    <div class="md">  
+        <input type="text" id="search">
+         <button class="btn" onclick="clearInput()">AC</button>
+         <button class="btn btn1" onclick="remove_value()"><b>x</b></button><br>
+         <button class="btn" onclick="add(1)"><b>1</b></button>
+         <button class="btn" onclick="add(2)"><b>2</b></button>
+         <button class="btn" onclick="add(3)"><b>3</b></button>
+         <button class="btn" onclick="add(4)"><b>4</b></button>
+         <button class="btn" onclick="add(5)"><b>5</b></button>
+         <button class="btn" onclick="add(6)"><b>6</b></button>
+         <button class="btn" onclick="add(7)"><b>7</b></button>
+         <button class="btn" onclick="add(8)"><b>8</b></button>
+         <button class="btn" onclick="add(9)"><b>9</b></button>
+         <button class="btn" onclick="add(0)"><b>0</b></button>
+         <button class="btn" onclick="add('+')"><b>+</b></button>
+         <button class="btn" onclick="add('-')"><b>-</b></button>
+         <button class="btn" onclick="add('')"><b></b></button>
+         <button class="btn" onclick="add('/')"><b>/</b></button>
+         <button class="btn" onclick="add('.')" >.</button>
+         <button class="btn" onclick="result()">=</button>
+       
+      
+    </div>
+
+    <script>
+        input=document.getElementById("search")
+   
+        function add(num){
+            input.value += num
+        }
+  
+        function clearInput(){
+            input.value="";
+        }
+
+        function remove_value(){
+        input.value=input.value.slice(0,-1)
+            }
+        function result(){
+            input.value=eval(input.value)
+        }
+
+        
+
+    </script>
+</body>
+</html>
